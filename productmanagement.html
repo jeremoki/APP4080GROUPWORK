@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management - Ecommerce Tailwind</title>
+
+    <link rel="shortcut icon" href="./assets/images/favicon/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="./main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header and Navbar -->
+    <header class="py-4 shadow-sm bg-white">
+        <div class="container flex items-center justify-between">
+            <a href="index.html">
+                <img src="./assets/images/logo.svg" alt="Logo" class="w-32">
+            </a>
+
+            <div class="w-full max-w-xl relative flex">
+                <span class="absolute left-4 top-3 text-lg text-gray-400">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <input type="text" name="search" id="search" class="w-full border border-primary border-r-0 pl-12 py-3 pr-3 rounded-l-md focus:outline-none" placeholder="search">
+                <button class="bg-primary border border-primary text-white px-8 rounded-r-md hover:bg-transparent hover:text-primary transition">Search</button>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-center text-gray-700 hover:text-primary transition relative">
+                    <div class="text-2xl">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="text-xs leading-3">Wishlist</div>
+                    <div class="absolute right-0 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">
+                        8
+                    </div>
+                </a>
+                <a href="#" class="text-center text-gray-700 hover:text-primary transition relative">
+                    <div class="text-2xl">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                    <div class="text-xs leading-3">Cart</div>
+                    <div class="absolute -right-3 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">
+                        2
+                    </div>
+                </a>
+                <a href="#" class="text-center text-gray-700 hover:text-primary transition relative">
+                    <div class="text-2xl">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                    <div class="text-xs leading-3">Account</div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="bg-gray-800">
+        <div class="container flex">
+            <div class="px-8 py-4 bg-primary flex items-center cursor-pointer relative group">
+                <span class="text-white">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+                <span class="capitalize ml-2 text-white">All Categories</span>
+
+                <!-- dropdown -->
+                <div class="absolute w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-300 divide-dashed opacity-0 group-hover:opacity-100 transition duration-300 invisible group-hover:visible">
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="./assets/images/icons/sofa.svg" alt="sofa" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Sofa</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="./assets/images/icons/terrace.svg" alt="terrace" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Terarce</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="./assets/images/icons/bed.svg" alt="bed" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Bed</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="./assets/images/icons/office.svg" alt="office" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">office</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="./assets/images/icons/outdoor-cafe.svg" alt="outdoor" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Outdoor</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="./assets/images/icons/bed-2.svg" alt="Mattress" class="w-5 h-5 object-contain">
+                        <span class="ml-6 text-gray-600 text-sm">Mattress</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between flex-grow pl-12">
+                <div class="flex items-center space-x-6 capitalize">
+                    <a href="../index.html" class="text-gray-200 hover:text-white transition">Home</a>
+                    <a href="pages/shop.html" class="text-gray-200 hover:text-white transition">Shop</a>
+                    <a href="#" class="text-gray-200 hover:text-white transition">About us</a>
+                    <a href="#" class="text-gray-200 hover:text-white transition">Contact us</a>
+                </div>
+                <a href="#" class="text-gray-200 hover:text-white transition">Login/Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container py-4 flex items-center gap-3">
+        <a href="../index.html" class="text-primary text-base">
+            <i class="fa-solid fa-house"></i>
+        </a>
+        <span class="text-sm text-gray-400">
+            <i class="fa-solid fa-chevron-right"></i>
+        </span>
+        <p class="text-gray-600 font-medium">Product Management</p>
+    </div>
+
+    <!-- Product Management Section -->
+    <div class="container grid grid-cols-12 items-start gap-6 pt-4 pb-16">
+
+        <!-- Sidebar -->
+        <div class="col-span-3">
+            <div class="px-4 py-3 shadow flex items-center gap-4">
+                <div class="flex-shrink-0">
+                    <img src="./assets/images/avatar.png" alt="profile" class="rounded-full w-14 h-14 border border-gray-200 p-1 object-cover">
+                </div>
+                <div class="flex-grow">
+                    <p class="text-gray-600">Hello,</p>
+                    <h4 class="text-gray-800 font-medium">John Doe</h4>
+                </div>
+            </div>
+
+            <div class="mt-6 bg-white shadow rounded p-4 divide-y divide-gray-200 space-y-4 text-gray-600">
+                <!-- ... (Copy the sidebar content from the provided HTML) ... -->
+            </div>
+        </div>
+
+        <!-- Product Management Content -->
+        <div class="col-span-9 grid grid-cols-3 gap-4">
+
+            <!-- Product List -->
+            <div class="shadow rounded bg-white px-4 pt-6 pb-8">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="font-medium text-gray-800 text-lg">Product List</h3>
+                    <a href="#" class="text-primary" onclick="showProductForm()">Add Product</a>
+                </div>
+                <div id="productList">
+                    <!-- Display product list dynamically here -->
+                </div>
+            </div>
+
+            <!-- Add/Edit Product Form -->
+            <div id="productForm" class="hidden shadow rounded bg-white px-4 pt-6 pb-8 mt-6">
+                <h3 class="font-medium text-gray-800 text-lg" id="formTitle">Add Product</h3>
+                <form id="productForm">
+                    <label for="productName">Product Name:</label>
+                    <input type="text" id="productName" required>
+
+                    <label for="productPrice">Product Price:</label>
+                    <input type="number" id="productPrice" required>
+
+                    <button type="button" onclick="saveProduct()">Save</button>
+                    <button type="button" onclick="cancelForm()">Cancel</button>
+                </form>
+            </div>
+
+        </div>
+        <!-- ./Product Management Content -->
+
+    </div>
+    <!-- ./Product Management Section -->
+
+    <!-- Footer -->
+    <footer class="bg-white pt-16 pb-12 border-t border-gray-100">
+        <!-- ... (Copy the footer content from the provided HTML) ... -->
+    </footer>
+
+    <!-- Copyright -->
+    <div class="bg-gray-800 py-4">
+        <div class="container flex items-center justify-between">
+            <p class="text-white">&copy; TailCommerce - All Right Reserved</p>
+            <div>
+                <img src="./assets/images/methods.png" alt="methods" class="h-5">
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Example data for product list (replace with dynamic data from the backend)
+        const products = [
+            { id: 1, name: 'Product A', price: 20.99 },
+            { id: 2, name: 'Product B', price: 34.99 },
+        ];
+
+        // Function to display products in the list
+        function displayProducts() {
+            const productList = document.getElementById('productList');
+            productList.innerHTML = '';
+            products.forEach(product => {
+                productList.innerHTML += `
+                    <div class="product-item">
+                        <span>${product.name} - $${product.price}</span>
+                        <span onclick="editProduct(${product.id})">Edit</span>
+                        <span onclick="deleteProduct(${product.id})">Delete</span>
+                    </div>`;
+            });
+        }
+
+        // Function to show the product form for adding/editing
+        function showProductForm() {
+            document.getElementById('productForm').classList.remove('hidden');
+            document.getElementById('formTitle').innerText = 'Add Product';
+            document.getElementById('productName').value = '';
+            document.getElementById('productPrice').value = '';
+        }
+
+        // Function to cancel the product form
+        function cancelForm() {
+            document.getElementById('productForm').classList.add('hidden');
+        }
+
+        // Function to save a new or edited product
+        function saveProduct() {
+            const productName = document.getElementById('productName').value;
+            const productPrice = parseFloat(document.getElementById('productPrice').value);
+
+            // Validation - Ensure product name and price are provided
+            if (!productName || isNaN(productPrice)) {
+                alert('Please provide valid product name and price.');
+                return;
+            }
+
+            // Replace with actual API calls to save the product to the backend
+            const productId = products.length + 1;
+            const newProduct = { id: productId, name: productName, price: productPrice };
+            products.push(newProduct);
+
+            // Display updated product list and hide the form
+            displayProducts();
+            cancelForm();
+        }
+
+        // Function to edit a product
+        function editProduct(productId) {
+            const product = products.find(p => p.id === productId);
+            if (product) {
+                document.getElementById('productForm').classList.remove('hidden');
+                document.getElementById('formTitle').innerText = 'Edit Product';
+                document.getElementById('productName').value = product.name;
+                document.getElementById('productPrice').value = product.price;
+            }
+        }
+
+        // Function to delete a product
+        function deleteProduct(productId) {
+            // Replace with actual API calls to delete the product from the backend
+            const index = products.findIndex(p => p.id === productId);
+            if (index !== -1) {
+                products.splice(index, 1);
+                displayProducts();
+            }
+        }
+
+        // Initial display of products
+        displayProducts();
+    </script>
+
+</body>
+
+</html>
